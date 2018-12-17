@@ -23,7 +23,8 @@
   package:
     state: 'present'
     name: "{{ package_name_wget }}"
-  retries: 5
+  register: result_wget
+  until: result_wget | success
   tags:
     - install
     - wget
