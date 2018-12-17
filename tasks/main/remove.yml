@@ -23,6 +23,9 @@
   package:
     state: 'absent'
     name: "{{ package_name_wget }}"
+  register: result_wget_r
+  until: result_wget_r is succeded
+  retries: 3
   tags:
     - remove
     - wget
