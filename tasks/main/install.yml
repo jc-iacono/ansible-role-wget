@@ -11,7 +11,6 @@
       - "vars/{{ ansible_distribution_version }}.yml"
       - 'vars/main.yml'
       skip: 'true'
-  retries: 5
   tags:
     - install
     - wget
@@ -24,6 +23,7 @@
   package:
     state: 'present'
     name: "{{ package_name_wget }}"
+  retries: 5
   tags:
     - install
     - wget
