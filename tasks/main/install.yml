@@ -11,6 +11,7 @@
       - "vars/{{ ansible_distribution_version }}.yml"
       - 'vars/main.yml'
       skip: 'true'
+  retries: 5
   tags:
     - install
     - wget
