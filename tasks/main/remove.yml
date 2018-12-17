@@ -5,10 +5,10 @@
 #-------------------------------------------------------------------------------
 
 - name: 'include variables'
-  include_vars: "{{item}}"
+  include_vars: "{{ item }}"
   with_first_found:
     - files:
-      - "vars/{{ansible_distribution_version}}.yml"
+      - "vars/{{ ansible_distribution_version }}.yml"
       - 'vars/main.yml'
       skip: 'true'
   tags:
@@ -22,7 +22,7 @@
 - name: 'package remove wget'
   package:
     state: 'absent'
-    name: "{{package_name_wget}}"
+    name: "{{ package_name_wget }}"
   tags:
     - remove
     - wget
