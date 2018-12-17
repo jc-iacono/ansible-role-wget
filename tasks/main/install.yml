@@ -24,8 +24,8 @@
   package:
     state: 'present'
     name: "{{ package_name_wget }}"
-  register: result_wget
-  until: result_wget is succeded
+  register: result_wget_i
+  until: result_wget_i is succeded
   retries: 3
   tags:
     - install
