@@ -3,10 +3,10 @@
 dependencies: []
 
 galaxy_info:
-  author: Test
+  author: Liv Community
   description: Simple wget for alpine
   company: none
-  license: "license (BSD, MIT)"
+  license: BSD
   min_ansible_version: 2.4
   platforms:
     - name: Alpine
